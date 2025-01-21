@@ -1,0 +1,51 @@
+<section id="skills" class="page">
+    <div class="skillContent container">
+        <div class="title">
+            <h1>Skills</h1>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="insideSkillContainer">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6" data-aos="fade-up " data-aos-anchor-placement="center-bottom"
+                            data-aos-delay="300">
+                            <div class="name">
+                                <h2>Technologies</h2>
+                            </div>
+                            <div class="row" *ngFor="let tmp of skills.technologies">
+                                <div class="progress-container progress-primary">
+                                    <span class="progress-badge details">{{tmp.skill}}</span>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-black" data-aos="progress-full" data-aos-offset="10"
+                                            data-aos-duration="2000" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"
+                                            [ngStyle]="{'width': tmp.proficiency}">{{tmp.proficiency}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-down" data-aos-anchor-placement="center-bottom"
+                            data-aos-delay="300">
+                            <div class="name">
+                                <h2>Tools</h2>
+                            </div>
+                            <div class="row" *ngFor="let tmp of skills.tools">
+                                <div class="progress-container progress-primary">
+                                    <span class="progress-badge details">{{tmp.name}}</span>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-black" data-aos="progress-full" data-aos-offset="10"
+                                            data-aos-duration="2000" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"
+                                            [ngStyle]="{'width': tmp.proficiency}">{{tmp.proficiency}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
